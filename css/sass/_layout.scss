@@ -106,7 +106,7 @@
     margin: 40px 0px;    
 
     img{
-        max-width: 400px;
+        max-width: 420px;
 
     }
 }
@@ -136,6 +136,7 @@
     justify-content: flex-start;
     align-items: center;
 
+    /*
     a{
         &:hover{
             & + .img-project{
@@ -143,12 +144,19 @@
                 z-index: 999 !important;
             }
         }
+    */
+
+   &:hover .img-project{
+        transform: translate(-50%,-50%) translate3d(0, 0, 0);
+        z-index: 999 !important;
     }
+    
+ 
 
 }
 
 .img-project{
-    max-width: 420px;
+    max-width: 350px;
     border-radius: 4px;
 
     transition: .8s ease;
