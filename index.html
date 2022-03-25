@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Link para CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Link para Fontes do Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;400;500&display=swap" rel="stylesheet"> 
+
+    <title>Portifólio - Front Week</title>
+</head>
+<body>
+    
+    <!-- Header-->
+    <header class="menu " id="">  
+        <div class="menu-left ">
+            <a href="#" class="link menu-1"> Home</a>
+            <a href="#section-00" class="link menu-2"> About</a>
+        </div>
+        <div class="menu-logo ">
+            <h5 class="menu-3">Jhonatas</h5>
+        </div>
+        <div class="menu-right ">
+            <a href="#section-01" class="link menu-4">Works</a>
+            <a href="#section-02" class="link menu-5">Get in touch</a>
+        </div>
+    </header>
+
+
+
+    <section class="container hero" id="section-00">
+        <div class="container-item">
+            <div>
+                <h1>Jhonatas Verissimo</h1>
+            </div>
+            
+            <div>
+                <h3 class="mask text-right mt-7">Creative Developer</h3>
+            </div>
+            
+            <div>
+                <h3 class="mask">Visual Design</h3>
+            </div>
+
+            <div class="flex-end pr-7">
+                <a href="#section-01" class="square flex-end">Works</a>
+            </div>
+        </div>
+
+        <div class="container-item">
+            <img src="img/perfil.jpg" height="300px" alt="Jhonatas Verissimo | Web Developer">
+        </div>
+    </section>
+
+    <!-- Trabalhos -->
+    <section class="list" id="section-01">
+        <div class="list-item">
+            <h2>Selected Works</h2>
+        </div>
+
+        
+
+        <div class="list-item py-6">
+            <h5 class="color-gray mr-2 ">01.</h5>
+            <a><h3>Suporte</h3></a>
+            <img src="img/lp-suporte.png" class="img-project" alt="">
+        </div>
+
+        <div class="bb-gray"></div>
+
+        <div class="list-item py-6">
+            <h5 class="color-gray mr-2">02.</h5>
+            <a ><h3>Pettra</h3></a>
+            <img src="img/lp-pettra.png" class="img-project" alt=""> 
+        </div>
+
+        <div class="bb-gray"></div>
+
+        <div class="list-item py-6">
+            <h5 class="color-gray mr-2">03.</h5>
+            <a ><h3>Katinu</h3></a>
+            <img src="img/lp-katinu.png" class="img-project" alt=""> 
+        </div>
+    </section>
+
+    <!-- Get in Touch-->
+    <section class="get" id="section-02">
+        
+        <div>
+            <h2 class="mt-7">Get in Touch</h2>
+        </div>
+
+        <div>
+            <h4 class="mask mt-7 text-center">jhonatas.dionizio@gmail.com</h4>
+        </div>
+        
+    </section>
+
+    <!-- Importação do GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.0/gsap.min.js" integrity="sha512-2fk3Q4NXPYAqIha0glLZ2nluueK43aNoxvijPf53+DgL7UW9mkN+uXc1aEmnZdkkZVvtJZltpRt+JqTWc3TS3Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.0/ScrollTrigger.min.js" integrity="sha512-jNJOCd1PIjJoUa1XTDKaPdBLNUe4OJTrltKG+70O5ghYZ943nTRGIzjObwC2JtSm1fG7T06GbUApR2eirIU/jA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script>
+
+       document.addEventListener('DOMContentLoaded', () => {
+           var tl = gsap.timeline();
+
+
+           tl
+           .from(".menu-1",{
+               duration:1,
+               ease:"power3.out",
+               y:50,
+               opacity:0,
+               delay:2
+           },"-=0.5")
+
+           .from(".menu-2",{
+               duration:1,
+               ease:"power3.out",
+               y:50,
+               opacity:0,
+           },"-=0.5")
+
+           .from(".menu-3",{
+               duration:1,
+               ease:"power3.out",
+               y:50,
+               opacity:0,
+               
+           },"-=0.5")
+
+           .from(".menu-4",{
+               duration:1,
+               ease:"power3.out",
+               y:50,
+               opacity:0,
+               
+           },"-=0.5")
+
+           .from(".menu-5",{
+               duration:1,
+               ease:"power3.out",
+               y:50,
+               opacity:0,
+               
+           },"-=0.5")
+
+
+           .from(".container-item div",{
+               duration:1,
+               ease:"power3.out",
+               y:300,
+               opacity:0,
+               stagger:{each:0.2},
+               
+           },"-=0.5")
+
+
+           .from(".container-item img",{
+               duration:1,
+               ease:"power3.out",
+               y:300,
+               opacity:0,
+               stagger:{each:0.2},
+               
+           },"-=0.2")
+
+           .from(".bg-hero",{
+               duration:1,
+               ease:"power3.out",
+               y:300,
+               opacity:0,
+               stagger:{each:0.2},
+               
+           },"-=0.5")
+
+           gsap.registerPlugin(ScrollTrigger);
+
+           gsap.from("#section-01 div",{
+                    duration:1,
+                    y:300,
+                    opacity:0,
+                    stagger:{each:0.2},
+                    ease:"power3.out",
+                    scrollTrigger:{
+                        trigger:"#section-01",
+                }
+           });
+
+           gsap.from("#section-02 div",{
+                    duration:3,
+                    y:50,
+                    opacity:0,
+                    stagger:{each:0.2},
+                    ease:"power3.out",
+                    scrollTrigger:{
+                        trigger:"#section-02",
+                        
+                }
+           });
+
+       })
+
+    </script>
+    
+</body>
+</html>
